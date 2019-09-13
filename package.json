@@ -1,0 +1,45 @@
+{
+  "name": "typescript-react-template",
+  "version": "0.1.0",
+  "description": "a typescript react template",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "webpack-dev-server --config scripts/webpack.dev.conf.js --mode=development --colors --watch --hot",
+    "build": "webpack --config scripts/webpack.prod.conf.js --mode=production --colors",
+    "lint": "eslint --ext .ts,.tsx,.json src",
+    "lint:fix": "eslint --ext .ts,.tsx,.json --fix src",
+    "typecheck": "tsc --noEmit --project .",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "lawvs",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/styled-components": "^4.1.19",
+    "@typescript-eslint/eslint-plugin": "^2.2.0",
+    "@typescript-eslint/parser": "^2.2.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "eslint": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-template": "^6.2.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.3",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
