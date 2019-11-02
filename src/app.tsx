@@ -23,9 +23,11 @@ export const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Container>
-        <Wrapper>Hello</Wrapper>
-      </Container>
+      <React.StrictMode>
+        <Container>
+          <Wrapper>Hello</Wrapper>
+        </Container>
+      </React.StrictMode>
     </>
   )
 }
