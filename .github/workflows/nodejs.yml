@@ -18,31 +18,31 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: get npm cache directory path
-        id: npm-cache-dir-path
-        run: echo "::set-output name=dir::$(npm config get cache)"
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - name: cache node modules
+      - name: Cache node modules
         uses: actions/cache@v1
         with:
-          path: ${{ steps.npm-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-npm
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install node modules
+        run: yarn install --frozen-lockfile
 
-      - name: npm install
-        run: npm ci
+      - name: Lint
+        run: yarn lint
 
-      - name: npm lint
-        run: npm run lint
+      - name: Type check
+        run: yarn typecheck
 
-      - name: type check
-        run: npm run typecheck
+      # - name: yarn test
+      #   run: yarn test
 
-      # - name: npm test
-      #   run: npm test
-
-      - name: npm build
-        run: npm run build
+      - name: Build
+        run: yarn build
       - name: deploy gh-pages
         if: github.ref == 'refs/heads/master'
         # https://github.com/peaceiris/actions-gh-pages
@@ -52,7 +52,7 @@ jobs:
           publish_dir: dist
           force_orphan: true
           disable_nojekyll: true
-      # - name: upload artifact
+      # - name: Upload artifact
       #   uses: actions/upload-artifact@v1
       #   with:
       #     name: dist
