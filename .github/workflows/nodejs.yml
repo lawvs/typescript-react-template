@@ -29,6 +29,7 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+
       - name: Install node modules
         run: yarn install --frozen-lockfile
 
@@ -38,12 +39,15 @@ jobs:
       - name: Type check
         run: yarn typecheck
 
-      # - name: yarn test
+      # - name: Test
       #   run: yarn test
 
       - name: Build
         run: yarn build
-      - name: deploy gh-pages
+        env:
+          PUBLIC_URL: /typescript-react-template
+
+      - name: Deploy gh-pages
         if: github.ref == 'refs/heads/master'
         # https://github.com/peaceiris/actions-gh-pages
         uses: peaceiris/actions-gh-pages@v3
