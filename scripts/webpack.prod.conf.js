@@ -29,6 +29,18 @@ const webpackConfig = merge(baseWebpackConfig, {
       },
     ]),
   ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          // Note the usage of `[\\/]` as a path separator for cross-platform compatibility.
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+  },
 })
 
 module.exports = webpackConfig
