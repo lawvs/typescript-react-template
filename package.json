@@ -7,11 +7,12 @@
     "dev": "webpack-dev-server --config scripts/webpack.dev.conf.js --mode=development --colors --watch --hot",
     "build": "webpack --config scripts/webpack.prod.conf.js --mode=production --colors",
     "build:ssr": "ts-node scripts/SsrRenderer.ts",
-    "lint": "eslint --ext .ts,.tsx,.json src",
-    "lint:fix": "eslint --ext .ts,.tsx,.json --fix src",
+    "lint": "eslint --ext .ts,.tsx .",
+    "lint:fix": "yarn lint --fix",
     "typecheck": "tsc --noEmit --project .",
     "clean": "rm -rf dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:ci": "jest --ci --coverage"
   },
   "keywords": [],
   "author": "lawvs",
@@ -22,6 +23,7 @@
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
+    "@types/jest": "^25.2.1",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.0",
@@ -39,7 +41,9 @@
     "eslint-plugin-react": "^7.19.0",
     "html-webpack-plugin": "^3.2.0",
     "html-webpack-template": "^6.2.0",
+    "jest": "^26.0.1",
     "prettier": "^2.0.5",
+    "ts-jest": "^25.5.1",
     "ts-node": "^8.9.0",
     "typescript": "^3.8.3",
     "url-loader": "^4.1.0",
