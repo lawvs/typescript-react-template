@@ -5,7 +5,7 @@ import { App } from './app'
 
 const rootElement = document.querySelector('#root') || document.body
 
-if (rootElement.hasChildNodes()) {
+if (rootElement.children.length) {
   hydrate(<App />, rootElement)
 } else {
   render(<App />, rootElement)
