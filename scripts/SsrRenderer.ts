@@ -5,21 +5,22 @@ import { renderToString } from 'react-dom/server'
 // https://styled-components.com/docs/advanced#server-side-rendering
 import { ServerStyleSheet } from 'styled-components'
 
-import { name } from '../package.json'
 import { App } from '../src/app'
+import { config } from './config'
 
-function SSRRenderer(jsx: JSX.Element, appMountId = 'root') {
+function SSRRenderer(jsx: JSX.Element) {
   const sheet = new ServerStyleSheet()
   const html = renderToString(sheet.collectStyles(jsx))
   const styles = sheet.getStyleTags()
   sheet.seal()
-  return `<style>${styles}</style><div id="${appMountId}">${html}</div>`
+  return { styles, html }
 }
 
 const OUTPUT_DIR = 'dist'
 
 const ssrString = SSRRenderer(React.createElement(App))
-const generateHTML = `<html><head><title>${name}</title></head><body>${ssrString}</body></html>`
+
+const generateHTML = `<html><head><title>${config.templateConfig.title}</title><style>${ssrString.styles}</style></head><body><div id="${config.templateConfig.appMountId}">${ssrString.html}</div></body></html>`
 
 if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR)

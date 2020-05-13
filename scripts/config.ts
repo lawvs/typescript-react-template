@@ -1,4 +1,3 @@
-import type { Options as HtmlWebpackTemplateOptions } from 'html-webpack-template'
 import { name, description } from '../package.json'
 
 export const config = {
@@ -16,5 +15,5 @@ export const config = {
         content: description,
       },
     ],
-  } as Partial<HtmlWebpackTemplateOptions>,
+  },
 } as const
