@@ -4,8 +4,8 @@
   "description": "a typescript react template",
   "scripts": {
     "start": "yarn dev",
-    "dev": "webpack-dev-server --config scripts/webpack.dev.conf.js --mode=development --colors --watch --hot",
-    "build": "webpack --config scripts/webpack.prod.conf.js --mode=production --colors",
+    "dev": "webpack-dev-server --config scripts/webpack.dev.config.js --mode=development --colors --watch --hot",
+    "build": "webpack --config scripts/webpack.prod.config.js --mode=production --colors",
     "build:ssr": "ts-node scripts/SsrRenderer.ts",
     "lint": "eslint --ext .ts,.tsx .",
     "lint:fix": "yarn lint --fix",

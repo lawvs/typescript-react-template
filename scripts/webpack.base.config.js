@@ -36,7 +36,6 @@ module.exports = {
   plugins: [
     // @see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      inject: false,
       template: HtmlWebpackTemplate,
       ...templateConfig,
       minify: {

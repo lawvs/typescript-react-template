@@ -3,7 +3,7 @@ const merge = require('webpack-merge')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const baseWebpackConfig = require('./webpack.base.conf')
+const baseWebpackConfig = require('./webpack.base.config')
 const { resolvePath } = require('./utils')
 
 const { publicUrl } = require('./config')
