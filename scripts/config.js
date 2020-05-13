@@ -3,7 +3,7 @@ const packageMeta = require(resolvePath('package.json'))
 
 module.exports = {
   port: 3000, // dev server port
-  publicUrl: process.env.PUBLIC_URL || '/',
+  publicUrl: process.env.PUBLIC_URL || '.',
   // @see https://github.com/jaketrent/html-webpack-template
   templateConfig: {
     title: packageMeta.name,

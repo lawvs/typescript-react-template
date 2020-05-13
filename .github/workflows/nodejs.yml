@@ -44,8 +44,6 @@ jobs:
 
       - name: Build
         run: yarn build
-        env:
-          PUBLIC_URL: /typescript-react-template
 
       - name: Deploy gh-pages
         if: github.ref == 'refs/heads/master'
