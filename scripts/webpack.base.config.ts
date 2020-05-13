@@ -1,14 +1,14 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackTemplate = require('html-webpack-template')
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable import/no-extraneous-dependencies */
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import HtmlWebpackTemplate from 'html-webpack-template'
+import type { Configuration } from 'webpack'
 
-const { resolvePath } = require('./utils')
-const { templateConfig } = require('./config')
+import { resolvePath } from './utils'
+import { config } from './config'
 
-/**
- * @type {import('webpack').Configuration}
- */
-module.exports = {
-  mode: process.env.NODE_ENV,
+const baseWebpackConfig: Configuration = {
+  mode: process.env.NODE_ENV as any,
   entry: resolvePath('src/index.tsx'),
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
@@ -36,12 +36,11 @@ module.exports = {
   plugins: [
     // @see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
+      inject: true,
       template: HtmlWebpackTemplate,
-      ...templateConfig,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-      },
-    }),
+      ...config.templateConfig,
+    } as any),
   ],
 }
+
+export default baseWebpackConfig

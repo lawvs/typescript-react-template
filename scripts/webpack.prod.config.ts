@@ -1,18 +1,18 @@
-const url = require('url')
-const merge = require('webpack-merge')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable import/no-extraneous-dependencies */
+import url from 'url'
+import merge from 'webpack-merge'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import type { Configuration } from 'webpack'
 
-const baseWebpackConfig = require('./webpack.base.config')
-const { resolvePath } = require('./utils')
+import baseWebpackConfig from './webpack.base.config'
+import { resolvePath } from './utils'
+import { config } from './config'
 
-const { publicUrl } = require('./config')
-const publicPath = url.parse(publicUrl).pathname
+const publicPath = url.parse(config.publicUrl).pathname as string
 
-/**
- * @type {import('webpack').Configuration}
- */
-const webpackConfig = merge(baseWebpackConfig, {
+const webpackConfig: Configuration = merge(baseWebpackConfig, {
   mode: 'production',
   bail: true,
   devtool: process.env.CI ? 'source-map' : false,
@@ -21,7 +21,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     publicPath,
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin() as any,
     new CopyWebpackPlugin([
       {
         from: resolvePath('public'), // static assets

@@ -1,20 +1,20 @@
-const { resolvePath } = require('./utils')
-const packageMeta = require(resolvePath('package.json'))
+import type { Options as HtmlWebpackTemplateOptions } from 'html-webpack-template'
+import { name, description } from '../package.json'
 
-module.exports = {
+export const config = {
   port: 3000, // dev server port
   publicUrl: process.env.PUBLIC_URL || '.',
   // @see https://github.com/jaketrent/html-webpack-template
   templateConfig: {
-    title: packageMeta.name,
+    title: name,
     appMountId: 'root',
     mobile: true,
     // @see https://github.com/joshbuchea/HEAD#meta
     meta: [
       {
         name: 'description',
-        content: packageMeta.description,
+        content: description,
       },
     ],
-  },
-}
+  } as Partial<HtmlWebpackTemplateOptions>,
+} as const
