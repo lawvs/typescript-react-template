@@ -36,7 +36,7 @@ const baseWebpackConfig: Configuration = {
   plugins: [
     // @see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      inject: true,
+      // inject: true,
       template: HtmlWebpackTemplate,
       ...config.templateConfig,
     } as any),

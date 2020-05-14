@@ -43,7 +43,7 @@ jobs:
         run: yarn test
 
       - name: Build
-        run: yarn build
+        run: yarn build:ssr
 
       - name: Deploy gh-pages
         if: github.ref == 'refs/heads/master'
