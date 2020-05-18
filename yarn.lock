@@ -725,10 +725,10 @@
     "@types/tapable" "*"
     "@types/webpack" "*"
 
-"@types/html-webpack-template@^6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@types/html-webpack-template/-/html-webpack-template-6.0.3.tgz#4b12700727ece370eadc6e8414b838aaa5d66336"
-  integrity sha512-JP68iB1sYf9XhNZ969S2ehdOVFgyqJMoF/h5a13xXVkpL06QIwNpbT6iNoQvoPOa2Fz1bof7+MMv62HS3Qsy4g==
+"@types/html-webpack-template@^6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@types/html-webpack-template/-/html-webpack-template-6.0.4.tgz#7d11e8ac0b33f96f2369af155f53c33f647780e5"
+  integrity sha512-rsmvrQG5TA9ZSROdhN8iW6S4OEh8ZdvBmomI8Dysn/ZzhFh8DehmsN6Ybl1llgyJQOSGQCvITMlv3KtSNreQMQ==
   dependencies:
     "@types/html-webpack-plugin" "*"
 
