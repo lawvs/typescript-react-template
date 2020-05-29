@@ -21,12 +21,15 @@ const webpackConfig: Configuration = merge(baseWebpackConfig, {
   },
   plugins: [
     new CleanWebpackPlugin() as any,
-    new CopyWebpackPlugin([
-      {
-        from: resolvePath('public'), // static assets
-        to: '[name].[ext]',
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: resolvePath('public'), // static assets
+          to: '[name].[ext]',
+          noErrorOnMissing: true,
+        },
+      ],
+    }),
   ],
   optimization: {
     splitChunks: {
