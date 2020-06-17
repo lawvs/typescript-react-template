@@ -2,10 +2,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import HtmlWebpackTemplate from 'html-webpack-template'
+import { EnvironmentPlugin } from 'webpack'
 import type { Configuration } from 'webpack'
 
 import { resolvePath } from './utils'
 import { config } from './config'
+import { getGitVersion } from './gitInfo'
 
 const baseWebpackConfig: Configuration = {
   mode: process.env.NODE_ENV as any,
@@ -40,6 +42,14 @@ const baseWebpackConfig: Configuration = {
       template: HtmlWebpackTemplate,
       ...config.templateConfig,
     } as any),
+    // use `process.env.NODE_ENV`
+    new EnvironmentPlugin({
+      // NODE_ENV: process.env.NODE_ENV,
+      PROJECT_NAME: process.env.npm_package_name,
+      BUILD_DATE: new Date().toISOString(),
+      CI: process.env.CI ?? null,
+      VERSION: getGitVersion(),
+    }),
   ],
 }
 
