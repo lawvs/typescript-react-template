@@ -49,9 +49,10 @@ jobs:
       - name: Copy coverage
         run: |
           cp -r coverage dist
-          # Replace public path
-          find ./dist/coverage/lcov-report/*.html -type f -exec sed --in-place --expression '/href="http/!  s/href="/href=".\//g' {} \;
-          find ./dist/coverage/lcov-report/*.html -type f -exec sed --in-place --expression '/href="http/!  s/src="/src=".\//g' {} \;
+          # Replace url path `<link href="base.css" />` to `<link href="./base.css" />`
+          find ./dist/coverage/lcov-report/*.html -type f -exec sed --in-place --expression '/href="http/! s/href="/href=".\//g' {} \;
+          # Replace js path `<script src="prettify.js">` to `<script src="./prettify.js">`
+          find ./dist/coverage/lcov-report/*.html -type f -exec sed --in-place --expression '/src="http/! s/src="/src=".\//g' {} \;
 
       - name: Deploy gh-pages
         if: github.ref == 'refs/heads/master'
