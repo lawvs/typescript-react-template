@@ -49,6 +49,7 @@ const baseWebpackConfig: Configuration = {
       BUILD_DATE: new Date().toISOString(),
       CI: process.env.CI || null,
       VERSION: getGitVersion(),
+      COVERAGE: (process.env.CI && 'coverage/lcov-report/index.html') || null,
     }),
   ],
 }

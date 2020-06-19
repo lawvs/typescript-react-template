@@ -17,6 +17,10 @@ const printBuildInfo = () => {
     `${process.env.NODE_ENV}${process.env.CI ? '(ci)' : ''}`,
   )
   console.log('Version:', process.env.VERSION)
+
+  if (process.env.COVERAGE) {
+    console.log('Coverage:', `${document.location.href}${process.env.COVERAGE}`)
+  }
   console.groupEnd()
 }
 
