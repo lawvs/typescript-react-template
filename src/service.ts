@@ -21,6 +21,12 @@ const printBuildInfo = () => {
   if (process.env.COVERAGE) {
     console.log('Coverage:', `${document.location.href}${process.env.COVERAGE}`)
   }
+  if (process.env.REPORT) {
+    console.log(
+      'Bundle report:',
+      `${document.location.href}${process.env.REPORT}`,
+    )
+  }
   console.groupEnd()
 }
 

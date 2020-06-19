@@ -50,6 +50,7 @@ const baseWebpackConfig: Configuration = {
       CI: process.env.CI || null,
       VERSION: getGitVersion(),
       COVERAGE: (process.env.CI && 'coverage/lcov-report/index.html') || null,
+      REPORT: (process.env.CI && 'report.html') || null,
     }),
   ],
 }

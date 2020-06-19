@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-extraneous-dependencies */
-import path from 'path'
 import merge from 'webpack-merge'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import type { Configuration } from 'webpack'
 
 import baseWebpackConfig from './webpack.base.config'
@@ -16,7 +16,7 @@ const webpackConfig: Configuration = merge(baseWebpackConfig, {
   devtool: process.env.CI ? 'source-map' : false,
   output: {
     filename: '[name].[chunkhash:8].js',
-    path: path.join(process.cwd(), config.outputDir),
+    path: resolvePath(config.outputDir),
     publicPath: config.publicPath,
   },
   plugins: [
@@ -30,7 +30,13 @@ const webpackConfig: Configuration = merge(baseWebpackConfig, {
         },
       ],
     }),
-  ],
+    process.env.CI
+      ? new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          openAnalyzer: false,
+        })
+      : false,
+  ].filter((i) => i),
   optimization: {
     splitChunks: {
       cacheGroups: {
