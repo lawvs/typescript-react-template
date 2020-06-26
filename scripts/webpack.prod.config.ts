@@ -51,4 +51,4 @@ const webpackConfig: Configuration = merge(baseWebpackConfig, {
   },
 })
 
-module.exports = webpackConfig
+export default webpackConfig
