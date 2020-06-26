@@ -36,21 +36,19 @@ const baseWebpackConfig: Configuration = {
     ],
   },
   plugins: [
-    // @see https://github.com/ampedandwired/html-webpack-plugin
+    // See https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       // inject: true,
       template: HtmlWebpackTemplate,
       ...config.templateConfig,
     } as any),
-    // use `process.env.NODE_ENV`
+
     new EnvironmentPlugin({
       // NODE_ENV: process.env.NODE_ENV,
       PROJECT_NAME: process.env.npm_package_name,
       BUILD_DATE: new Date().toISOString(),
       CI: process.env.CI || null,
       VERSION: getGitVersion(),
-      COVERAGE: (process.env.CI && 'coverage/lcov-report/index.html') || null,
-      REPORT: (process.env.CI && 'report.html') || null,
     }),
   ],
 }

@@ -13,7 +13,7 @@ interface Configuration extends WebpackConfiguration {
 
 const webpackConfig: Configuration = merge(baseWebpackConfig, {
   mode: 'development',
-  // @see https://webpack.js.org/configuration/devtool/
+  // See https://webpack.js.org/configuration/devtool/
   devtool: 'cheap-module-eval-source-map',
   output: {
     publicPath: '/',
