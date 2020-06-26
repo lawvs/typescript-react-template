@@ -1,5 +1,5 @@
 // https://www.styled-components.com/
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, DefaultTheme } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 body {
@@ -14,3 +14,7 @@ a {
   text-decoration: none;
 }
 `
+
+export const theme: DefaultTheme = {
+  bg: 'white',
+}
