@@ -1,6 +1,6 @@
 {
   "name": "typescript-react-template",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "a typescript react template",
   "scripts": {
     "start": "yarn dev",
