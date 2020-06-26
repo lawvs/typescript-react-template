@@ -1,8 +1,8 @@
 import url from 'url'
 
 // Notice: use comment will be removed by HtmlWebpackPlugin.minify.removeComments)
-export const ssrStylesPlaceholder = '<div hidden>ssr-styles-outlet</div>'
-export const ssrHtmlPlaceholder = '<div hidden>ssr-html-outlet</div>'
+export const SSR_STYLES_PLACEHOLDER = '<div hidden>ssr-styles-outlet</div>'
+export const SSR_HTML_PLACEHOLDER = '<div hidden>ssr-html-outlet</div>'
 
 export const config = {
   port: 3000, // dev server port
@@ -16,8 +16,8 @@ export const config = {
     appMountId: 'root',
 
     inject: !process.env.SSR_STATIC,
-    headHtmlSnippet: process.env.SSR && ssrStylesPlaceholder,
-    appMountHtmlSnippet: process.env.SSR && ssrHtmlPlaceholder,
+    headHtmlSnippet: process.env.SSR && SSR_STYLES_PLACEHOLDER,
+    appMountHtmlSnippet: process.env.SSR && SSR_HTML_PLACEHOLDER,
 
     // <meta content="width=device-width,initial-scale=1" name="viewport" />
     mobile: true,
