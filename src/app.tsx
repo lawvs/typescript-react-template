@@ -4,7 +4,8 @@ import styled, { ThemeProvider } from 'styled-components'
 import { GlobalStyle, theme } from './styles'
 
 const AppContainer = styled.div`
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   width: 100vw;
   max-width: 100%;
   display: flex;
