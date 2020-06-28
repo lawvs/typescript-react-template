@@ -32,17 +32,17 @@ const Footer = styled(ContentWrapper)`
 export const App = () => {
   return (
     <>
-      <GlobalStyle />
-      <React.StrictMode>
-        <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <React.StrictMode>
           <AppContainer>
             <ContentWrapper>
               <div>Typescript React Template</div>
             </ContentWrapper>
             <Footer as="footer">licensed under the MIT license.</Footer>
           </AppContainer>
-        </ThemeProvider>
-      </React.StrictMode>
+        </React.StrictMode>
+      </ThemeProvider>
     </>
   )
 }
