@@ -46,7 +46,7 @@
     "eslint-plugin-react": "^7.19.0",
     "html-webpack-plugin": "^4.3.0",
     "html-webpack-template": "^6.2.0",
-    "jest": "^26.0.1",
+    "jest": "^26.1.0",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.1",
     "ts-loader": "^7.0.5",
