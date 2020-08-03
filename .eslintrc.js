@@ -1,6 +1,6 @@
 // https://eslint.org/
 
-/** @type { import("@types/eslint").Linter.Config } */
+/** @type { import('eslint').Linter.Config } */
 module.exports = {
   env: {
     es6: true,
@@ -31,6 +31,7 @@ module.exports = {
     'prettier/prettier': 'warn',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'react/prop-types': 'off',
     'import/extensions': [
