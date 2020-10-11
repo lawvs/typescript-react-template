@@ -1,18 +1,17 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-extraneous-dependencies */
 import merge from 'webpack-merge'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { EnvironmentPlugin } from 'webpack'
-import type { Configuration, Plugin } from 'webpack'
+import type { Configuration, WebpackPluginInstance } from 'webpack'
 
 import baseWebpackConfig from './webpack.base.config'
 import { resolvePath } from './utils'
 import { config } from './config'
 
-const plugins: Plugin[] = [
-  new CleanWebpackPlugin() as any,
+const plugins: WebpackPluginInstance[] = [
+  new CleanWebpackPlugin(),
   new CopyWebpackPlugin({
     patterns: [
       {
