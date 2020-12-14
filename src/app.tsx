@@ -29,20 +29,18 @@ const Footer = styled(ContentWrapper)`
   padding-bottom: 20px;
 `
 
-export const App = () => {
-  return (
-    <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <React.StrictMode>
-          <AppContainer>
-            <ContentWrapper>
-              <div>Typescript React Template</div>
-            </ContentWrapper>
-            <Footer as="footer">licensed under the MIT license.</Footer>
-          </AppContainer>
-        </React.StrictMode>
-      </ThemeProvider>
-    </>
-  )
-}
+export const App = () => (
+  <>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <React.StrictMode>
+        <AppContainer>
+          <ContentWrapper>
+            <div>Typescript React Template</div>
+          </ContentWrapper>
+          <Footer as="footer">licensed under the MIT license.</Footer>
+        </AppContainer>
+      </React.StrictMode>
+    </ThemeProvider>
+  </>
+)
