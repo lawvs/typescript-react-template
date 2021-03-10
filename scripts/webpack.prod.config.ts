@@ -16,7 +16,7 @@ const plugins: WebpackPluginInstance[] = [
     patterns: [
       {
         from: resolvePath('public'), // static assets
-        to: '[name].[ext]',
+        to: '[name][ext]',
         noErrorOnMissing: true,
       },
     ],
