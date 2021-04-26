@@ -898,12 +898,14 @@
   dependencies:
     source-map "^0.6.1"
 
-"@types/webpack-bundle-analyzer@^3.9.2":
-  version "3.9.2"
-  resolved "https://registry.yarnpkg.com/@types/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.9.2.tgz#a20936d3848ddbbe3a0678ba2e225f790ab0d344"
-  integrity sha512-+LirhEpWEPRMyOW0HCy/lTTGzfdEWL26ximknO+/oaAQkigJJktxMr/QE7EWVNMRv+hpwW20Mv3YfLs42q2kjA==
+"@types/webpack-bundle-analyzer@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@types/webpack-bundle-analyzer/-/webpack-bundle-analyzer-4.4.0.tgz#cd7cc5c24e17044023bc6d26dd060287fcf370f4"
+  integrity sha512-8evCbPtT2jOUhVGgVDSzk3Y2g4oaxIkakqTj66vRrYjbOoIGmKJSnS4COObwffByiOEYxW7U8ymq9ae9qlH62Q==
   dependencies:
-    "@types/webpack" "^4"
+    "@types/node" "*"
+    tapable "^2.2.0"
+    webpack "^5"
 
 "@types/webpack-dev-server@^3.11.3":
   version "3.11.3"
@@ -7150,7 +7152,7 @@ webpack-sources@^2.1.1:
     source-list-map "^2.0.1"
     source-map "^0.6.1"
 
-webpack@^5.1.0, webpack@^5.35.1:
+webpack@^5, webpack@^5.1.0, webpack@^5.35.1:
   version "5.35.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.35.1.tgz#857670799465c8a5cbb94c4c175d60ac42d18ba3"
   integrity sha512-uWKYStqJ23+N6/EnMEwUjPSSKUG1tFmcuKhALEh/QXoUxwN8eb3ATNIZB38A+fO6QZ0xfc7Cu7KNV9LXNhDCsw==
