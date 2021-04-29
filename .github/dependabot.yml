@@ -1,0 +1,12 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  target-branch: dep
+  ignore:
+  - dependency-name: html-webpack-plugin
+    versions:
+    - 5.1.0
