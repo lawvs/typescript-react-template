@@ -22,7 +22,9 @@ const webpackConfig: Configuration = merge(baseWebpackConfig, {
     port: config.port,
     open: true,
     historyApiFallback: true,
-    contentBase: resolvePath('public'), // static assets
+    static: {
+      directory: resolvePath('public'), // static assets
+    },
   },
   performance: {
     hints: false,
