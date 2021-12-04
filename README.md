@@ -8,7 +8,7 @@ a boilerplate for Typescript React project
 
 - Equip with Typescript, React, Styled components
 - Equip [Test](https://lawvs.github.io/typescript-react-template/coverage/lcov-report/index.html)
-- Build with Webpack4
+- Build with Webpack5
 - Support SSR
 - Support CI/CD
 - Lint with ESlint and Airbnb's style sheet
