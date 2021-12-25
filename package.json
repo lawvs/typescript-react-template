@@ -4,7 +4,7 @@
   "description": "a typescript react template",
   "scripts": {
     "start": "yarn dev",
-    "dev": "webpack serve --config scripts/webpack.dev.config.ts --watch --hot --color",
+    "dev": "webpack serve --config scripts/webpack.dev.config.ts --hot --color",
     "build": "webpack --config scripts/webpack.prod.config.ts --color",
     "build:ssr": "export SSR=1 && yarn build && ts-node scripts/prerender.ts",
     "build:static": "export SSR_STATIC=1 && yarn build:ssr",
