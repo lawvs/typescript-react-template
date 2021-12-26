@@ -1,4 +1,4 @@
-import React from 'react'
+import { StrictMode } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 
 import { GlobalStyle, theme } from './styles'
@@ -30,17 +30,15 @@ const Footer = styled(ContentWrapper)`
 `
 
 export const App = () => (
-  <>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <React.StrictMode>
-        <AppContainer>
-          <ContentWrapper>
-            <div>Typescript React Template</div>
-          </ContentWrapper>
-          <Footer as="footer">licensed under the MIT license.</Footer>
-        </AppContainer>
-      </React.StrictMode>
-    </ThemeProvider>
-  </>
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <StrictMode>
+      <AppContainer>
+        <ContentWrapper>
+          <div>Typescript React Template</div>
+        </ContentWrapper>
+        <Footer as="footer">licensed under the MIT license.</Footer>
+      </AppContainer>
+    </StrictMode>
+  </ThemeProvider>
 )

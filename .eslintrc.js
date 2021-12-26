@@ -33,6 +33,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',

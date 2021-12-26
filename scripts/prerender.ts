@@ -1,13 +1,12 @@
 import fs from 'fs'
 import path from 'path'
-import React from 'react'
-
+import { createElement } from 'react'
 import { App } from '../src/app'
 import { config } from './config'
 import { render } from './SsrRenderer'
 
 const HTML_FILE = path.join(process.cwd(), config.outputDir, 'index.html')
-const ssrResult = render(React.createElement(App))
+const ssrResult = render(createElement(App))
 
 // <html>
 //   <head>
