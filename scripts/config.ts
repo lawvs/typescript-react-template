@@ -1,5 +1,3 @@
-import url from 'url'
-
 // Notice: use comment will be removed by HtmlWebpackPlugin.minify.removeComments)
 export const SSR_STYLES_PLACEHOLDER = '<div hidden>ssr-styles-outlet</div>'
 export const SSR_HTML_PLACEHOLDER = '<div hidden>ssr-html-outlet</div>'
@@ -8,7 +6,7 @@ export const config = {
   port: 3000, // dev server port
   outputDir: 'dist',
   publicPath: process.env.PUBLIC_URL
-    ? (url.parse(process.env.PUBLIC_URL).pathname as string)
+    ? (new URL(process.env.PUBLIC_URL).pathname as string)
     : '.',
   // See https://github.com/jaketrent/html-webpack-template
   templateConfig: {
