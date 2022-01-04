@@ -1,4 +1,7 @@
-// https://eslint.org/
+// https://eslint.org/docs/user-guide/configuring
+// "off" or 0 - turn the rule off
+// "warn" or 1 - turn the rule on as a warning (doesn’t affect exit code)
+// "error" or 2 - turn the rule on as an error (exit code will be 1)
 
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
@@ -36,6 +39,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
+    "react/function-component-definition":['error', { namedComponents: 'arrow-function' }],
     'import/extensions': [
       'error',
       'ignorePackages',
