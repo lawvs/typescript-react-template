@@ -58,4 +58,5 @@ module.exports = {
       version: require('react').version,
     },
   },
+  reportUnusedDisableDirectives: true,
 }
