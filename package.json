@@ -24,7 +24,6 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "@types/copy-webpack-plugin": "^10.1.0",
     "@types/html-webpack-template": "^6.0.5",
     "@types/jest": "^27.4.0",
     "@types/react": "^17.0.38",
