@@ -2,28 +2,29 @@
   "name": "typescript-react-template",
   "version": "0.4.0",
   "description": "a typescript react template",
+  "keywords": [],
+  "license": "MIT",
+  "author": "lawvs",
   "scripts": {
-    "start": "yarn dev",
-    "dev": "webpack serve --config scripts/webpack.dev.config.ts --hot --color",
     "build": "webpack --config scripts/webpack.prod.config.ts --color",
-    "build:ssr": "export SSR=1 && yarn build && ts-node scripts/prerender.ts",
-    "build:static": "export SSR_STATIC=1 && yarn build:ssr",
+    "build:ssr": "export SSR=1 && pnpm build && ts-node scripts/prerender.ts",
+    "build:static": "export SSR_STATIC=1 && pnpm build:ssr",
+    "clean": "rm -rf dist coverage",
+    "dev": "webpack serve --config scripts/webpack.dev.config.ts --hot --color",
     "lint": "eslint --ext .ts,.tsx .",
-    "lint:fix": "yarn lint --fix",
-    "typecheck": "tsc --noEmit --project .",
+    "lint:fix": "pnpm lint --fix",
+    "start": "pnpm run dev",
     "test": "jest",
     "test:ci": "jest --ci --coverage",
-    "clean": "rm -rf dist coverage"
+    "typecheck": "tsc --noEmit --project ."
   },
-  "keywords": [],
-  "author": "lawvs",
-  "license": "MIT",
   "dependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@jest/types": "^28.1.1",
     "@types/html-webpack-template": "^6.0.5",
     "@types/jest": "^27.5.0",
     "@types/react": "^18.0.12",
@@ -59,5 +60,11 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.2",
     "webpack-merge": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=17.0.0",
+    "npm": "please-use-pnpm",
+    "pnpm": ">=7.0.0",
+    "yarn": "please-use-pnpm"
   }
 }
