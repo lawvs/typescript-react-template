@@ -1,11 +1,12 @@
-import { hydrate, render } from 'react-dom'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import { App } from './app'
 import './service'
 
-const rootElement = document.querySelector('#root') || document.body
+const container = document.querySelector('#root') || document.body
 
-if (rootElement.children.length) {
-  hydrate(<App />, rootElement)
+if (container.children.length) {
+  hydrateRoot(container, <App />)
 } else {
-  render(<App />, rootElement)
+  const root = createRoot(container)
+  root.render(<App />)
 }
