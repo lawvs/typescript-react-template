@@ -70,11 +70,11 @@ devDependencies:
     specifier: ^4.6.0
     version: 4.6.0(eslint@8.23.0)
   html-webpack-plugin:
-    specifier: ^5.5.0
-    version: 5.5.0(webpack@5.74.0)
+    specifier: ^5.5.3
+    version: 5.5.3(webpack@5.74.0)
   html-webpack-template:
     specifier: ^6.2.0
-    version: 6.2.0(html-webpack-plugin@5.5.0)
+    version: 6.2.0(html-webpack-plugin@5.5.3)
   jest:
     specifier: ^29.0.1
     version: 29.0.1(@types/node@18.7.13)(ts-node@10.9.1)
@@ -3414,8 +3414,8 @@ packages:
       terser: 5.15.0
     dev: true
 
-  /html-webpack-plugin@5.5.0(webpack@5.74.0):
-    resolution: {integrity: sha512-sy88PC2cRTVxvETRgUHFrL4No3UxvcH8G1NepGhqaTT+GXN2kTamqasot0inS5hXeg1cMbFDt27zzo9p35lZVw==}
+  /html-webpack-plugin@5.5.3(webpack@5.74.0):
+    resolution: {integrity: sha512-6YrDKTuqaP/TquFH7h4srYWsZx+x6k6+FbsTm0ziCwGHDP78Unr1r9F/H4+sGmMbX08GQcJ+K64x55b+7VM/jg==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
       webpack: ^5.20.0
@@ -3428,12 +3428,12 @@ packages:
       webpack: 5.74.0(webpack-cli@5.1.4)
     dev: true
 
-  /html-webpack-template@6.2.0(html-webpack-plugin@5.5.0):
+  /html-webpack-template@6.2.0(html-webpack-plugin@5.5.3):
     resolution: {integrity: sha512-wyzIjbe9yXGyQ6yAeFjWmku7YOlW85w1dxqLnAQ564uRNNoBhpZVTQl7ouROoyQrfZUSoPUJiw7oWn31NDiuQQ==}
     peerDependencies:
       html-webpack-plugin: 2.x || ^3
     dependencies:
-      html-webpack-plugin: 5.5.0(webpack@5.74.0)
+      html-webpack-plugin: 5.5.3(webpack@5.74.0)
     dev: true
 
   /htmlparser2@6.1.0:
