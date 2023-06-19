@@ -30,7 +30,7 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.2.6",
     "@types/styled-components": "^5.1.26",
-    "@types/webpack-bundle-analyzer": "^4.4.2",
+    "@types/webpack-bundle-analyzer": "^4.6.0",
     "@typescript-eslint/eslint-plugin": "^5.59.11",
     "@typescript-eslint/parser": "^5.59.11",
     "clean-webpack-plugin": "^4.0.0",
@@ -54,7 +54,7 @@
     "typescript": "^5.0.2",
     "url-loader": "^4.1.1",
     "webpack": "^5.74.0",
-    "webpack-bundle-analyzer": "^4.6.1",
+    "webpack-bundle-analyzer": "^4.9.0",
     "webpack-cli": "^5.0.0",
     "webpack-dev-server": "^4.15.1",
     "webpack-merge": "^5.9.0"
