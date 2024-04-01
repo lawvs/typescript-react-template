@@ -12,14 +12,14 @@ module.exports = {
     // jest: true,
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'react', 'prettier'],
+  plugins: ['@typescript-eslint', 'react'],
   extends: [
     'airbnb',
-    "airbnb/hooks",
+    'airbnb/hooks',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2020,
@@ -31,7 +31,6 @@ module.exports = {
   },
   rules: {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
-    'prettier/prettier': 'warn',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -39,7 +38,10 @@ module.exports = {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
-    "react/function-component-definition":['error', { namedComponents: 'arrow-function' }],
+    'react/function-component-definition': [
+      'error',
+      { namedComponents: 'arrow-function' },
+    ],
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -58,5 +60,4 @@ module.exports = {
       version: require('react').version,
     },
   },
-  reportUnusedDisableDirectives: true,
 }
