@@ -10,11 +10,11 @@ const printBuildInfo = () => {
     'Build date:',
     process.env.BUILD_DATE
       ? new Date(process.env.BUILD_DATE).toLocaleString()
-      : 'Unknown'
+      : 'Unknown',
   )
   console.log(
     'Environment:',
-    `${process.env.NODE_ENV}${process.env.CI ? '(ci)' : ''}`
+    `${process.env.NODE_ENV}${process.env.CI ? '(ci)' : ''}`,
   )
   console.log('Version:', process.env.VERSION)
 
@@ -24,7 +24,7 @@ const printBuildInfo = () => {
   if (process.env.REPORT) {
     console.log(
       'Bundle report:',
-      `${document.location.href}${process.env.REPORT}`
+      `${document.location.href}${process.env.REPORT}`,
     )
   }
   console.groupEnd()
