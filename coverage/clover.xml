@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1726940332354" clover="3.2.0">
+  <project timestamp="1726940332354" name="All files">
+    <metrics statements="34" coveredstatements="10" conditionals="11" coveredconditionals="0" methods="3" coveredmethods="0" elements="48" coveredelements="10" complexity="0" loc="34" ncloc="34" packages="1" files="5" classes="5"/>
+    <file name="app.tsx" path="/home/runner/work/typescript-react-template/typescript-react-template/src/app.tsx">
+      <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="33" count="0" type="stmt"/>
+    </file>
+    <file name="index.tsx" path="/home/runner/work/typescript-react-template/typescript-react-template/src/index.tsx">
+      <metrics statements="8" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="0" type="stmt"/>
+      <line num="2" count="0" type="stmt"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+    </file>
+    <file name="service.ts" path="/home/runner/work/typescript-react-template/typescript-react-template/src/service.ts">
+      <metrics statements="14" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="4" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="19" count="0" type="stmt"/>
+      <line num="21" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="24" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="30" count="0" type="stmt"/>
+      <line num="33" count="0" type="stmt"/>
+    </file>
+    <file name="styled.d.ts" path="/home/runner/work/typescript-react-template/typescript-react-template/src/styled.d.ts">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+    </file>
+    <file name="styles.ts" path="/home/runner/work/typescript-react-template/typescript-react-template/src/styles.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
