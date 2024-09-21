@@ -45,9 +45,9 @@ const baseWebpackConfig: Configuration = {
 
     new EnvironmentPlugin({
       // NODE_ENV: process.env.NODE_ENV,
-      PROJECT_NAME: process.env.npm_package_name,
+      PROJECT_NAME: process.env.npm_package_name ?? '',
       BUILD_DATE: new Date().toISOString(),
-      CI: process.env.CI || null,
+      CI: process.env.CI || '',
       VERSION: getGitVersion(),
     }),
   ],

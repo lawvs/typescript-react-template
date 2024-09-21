@@ -24,7 +24,7 @@ export const getGitVersion = () => {
     console.error(
       "You haven't installed git or it does not exist in your PATH.",
     )
-    return null
+    return ''
   }
   const VERSION = execSync('git describe --always --dirty')
     .toString()
