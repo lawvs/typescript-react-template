@@ -47,6 +47,8 @@ const baseWebpackConfig: Configuration = {
       // NODE_ENV: process.env.NODE_ENV,
       PROJECT_NAME: process.env.npm_package_name ?? '',
       BUILD_DATE: new Date().toISOString(),
+      // Fix https://github.com/webpack/webpack/issues/18719
+      // CI: process.env.CI || null,
       CI: process.env.CI || '',
       VERSION: getGitVersion(),
     }),
