@@ -2,7 +2,7 @@
 import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 // https://styled-components.com/docs/advanced#server-side-rendering
 import { ServerStyleSheet } from 'styled-components'
-
+import { JSX } from 'react'
 import { SSR_STYLES_PLACEHOLDER, SSR_HTML_PLACEHOLDER } from './config'
 
 export function render(jsx: JSX.Element) {
