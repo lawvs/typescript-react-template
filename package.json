@@ -21,11 +21,11 @@
   "dependencies": {
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "styled-components": "^6.5.2"
+    "styled-components": "^6.5.3"
   },
   "devDependencies": {
     "@jest/types": "^30.4.1",
-    "@types/html-webpack-template": "^6.0.9",
+    "@types/html-webpack-template": "^6.0.10",
     "@types/jest": "^30.0.0",
     "@types/node": "^26.2.0",
     "@types/react": "^19.2.18",
@@ -36,7 +36,7 @@
     "@typescript-eslint/parser": "^8.67.0",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^14.0.0",
-    "eslint": "^10.8.1",
+    "eslint": "^10.9.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
